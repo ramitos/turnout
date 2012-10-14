@@ -1,78 +1,79 @@
 # turnout
 
 ## usage
+```js
+var router = require('../')()
 
-    var router = require('../')()
-    
-    require('http').createServer(function (req, res) {
-      router(req, res, function () {
-        res.statusCode = 404
-        res.end()
-      })
-    }).listen()
-    
-    router.post('/todo/:id', function (req, res, params, query) {})
-    
-    router.put('/todo/:id/:state', function (req, res, params, query) {})
-    
-    router.get('/user/:id', function (req, res, params, query) {})
-    
-    router.del('/user/:id', function (req, res, params, query) {})
+require('http').createServer(function (req, res) {
+    router(req, res, function () {
+    res.statusCode = 404
+    res.end()
+    })
+}).listen()
+
+router.post('/todo/:id', function (req, res, params, query) {})
+
+router.put('/todo/:id/:state', function (req, res, params, query) {})
+
+router.get('/user/:id', function (req, res, params, query) {})
+
+router.del('/user/:id', function (req, res, params, query) {})
+```
 
 ## install
-    npm install turnout
+    $ npm install turnout
 
 ## test
 [![Build Status](https://secure.travis-ci.org/ramitos/turnout.png)](http://travis-ci.org/ramitos/turnout)
 
-    npm test
+    $ npm test
 
 ## api
 
 ### methods
 
 ###### get
-
-    router.get('/', callback)
-    
+```js
+router.get('/', callback)
+``` 
 ###### post
-
-    router.post('/', callback)
-    
+```js
+router.post('/', callback)
+```
 ###### put
-
-    router.put('/', callback)
-    
+```js
+router.put('/', callback)
+```
 ###### delete
-
-    router.del('/', callback)
-    
+```js
+router.del('/', callback)
+```
 ### path
 
 ###### path
-
-    router.get('/todo/:id', callback)
-    
+```js
+router.get('/todo/:id', callback)
+```
 ###### regexp
-
-    router.get(/\/todo\/(\d*?)/, callback)
-    
+```js
+router.get(/\/todo\/(\d*?)/, callback)
+```
 ### params
+```js
+router.get('/todo/:id', function (req, res, params) {
+  assert(params.id === '5')
+})
 
-    router.get('/todo/:id', function (req, res, params) {
-      assert(params.id === '5')
-    })
-    
-    request.get('http://address:port/todo/5')
-    
+request.get('http://address:port/todo/5')
+``` 
 ### query
+```js
+router.get('/todos/:state', function (req, res, params, query) {
+  assert(query.priority === 'urgent')
+})
 
-    router.get('/todos/:state', function (req, res, params, query) {
-      assert(query.priority === 'urgent')
-    })
-    
-    request.get('http://address:port/todo/completed?priority=urgent')
-
+request.get('http://address:port/todo/completed?priority=urgent')
+```
 ## credits
  * The API is inspired by [TJ Holowaychuk](https://github.com/visionmedia)'s [express](https://github.com/visionmedia/express).
  * The path regular expression function comes from [TJ Holowaychuk](https://github.com/visionmedia)'s [express](https://github.com/visionmedia/express). The copyright is present.
