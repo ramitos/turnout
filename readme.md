@@ -23,8 +23,7 @@ router.del('/user/:id', function (req, res, params, query) {})
 ## install
     $ npm install turnout
 
-## test
-[![Build Status](https://secure.travis-ci.org/ramitos/turnout.png)](http://travis-ci.org/ramitos/turnout)
+## test [![Build Status](https://secure.travis-ci.org/ramitos/turnout.png)](http://travis-ci.org/ramitos/turnout)
 
     $ npm test
 
