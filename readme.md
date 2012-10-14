@@ -2,7 +2,7 @@
 
 ## usage
 ```js
-var router = require('../')()
+var router = require('turnout')()
 
 require('http').createServer(function (req, res) {
     router(req, res, function () {
