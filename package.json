@@ -1,19 +1,27 @@
 {
-  "name": "turnout",
-  "version": "0.0.1",
+  "author": "Sérgio Ramos <mail@sergioramos.me>",
   "description": "http router",
-  "main": "turnout.js",
-  "scripts": {
-    "test": "node test/runner.js"
-  },
+  "main": "src/turnout.js",
+  "version": "0.0.1",
+  "name": "turnout",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/ramitos/turnout.git"
   },
+  "devDependencies": {
+    "blage": "0.0.x",
+    "specced": "0.0.x",
+    "request": "2.11.x"
+  },
+  "scripts": {
+    "test": "node test/runner.js"
+  },
+  "directories": {
+    "test": "test"
+  },
   "keywords": [
     "http",
     "router"
-  ],
-  "author": "Sérgio Ramos <mail@sergioramos.me>",
-  "license": "FreeBSD"
+  ]
 }
