@@ -1,0 +1,19 @@
+{
+  "name": "turnout",
+  "version": "0.0.1",
+  "description": "http router",
+  "main": "turnout.js",
+  "scripts": {
+    "test": "node test/runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ramitos/turnout.git"
+  },
+  "keywords": [
+    "http",
+    "router"
+  ],
+  "author": "Sérgio Ramos <mail@sergioramos.me>",
+  "license": "FreeBSD"
+}
