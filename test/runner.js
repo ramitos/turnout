@@ -22,8 +22,8 @@ test.before = function (helpers, callback) {
 
 test.run(function (e) {
   console.log('tests not passed')
-  process.exit()
+  process.exit(1)
 }, function () {
   console.log('all passed')
-  process.exit()
+  process.exit(0)
 })

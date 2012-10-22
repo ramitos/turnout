@@ -1,4 +1,5 @@
-var qs = require('querystring'),
+var format = require('./format'),
+    qs = require('querystring'),
     regex = require('./regex'),
     url = require('url')
     
@@ -58,6 +59,10 @@ module.exports = function () {
   
   turnout.del = function (path, callback) {
     routes.delete[path] = callback
+  }
+  
+  turnout.routes = function () {
+    return format.routes(routes)
   }
   
   return turnout
