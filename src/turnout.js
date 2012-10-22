@@ -1,5 +1,5 @@
-var format = require('./format'),
-    qs = require('querystring'),
+var qs = require('querystring'),
+    parse = require('./parse'),
     regex = require('./regex'),
     url = require('url')
     
@@ -62,7 +62,7 @@ module.exports = function () {
   }
   
   turnout.routes = function () {
-    return format.routes(routes)
+    return parse.routes(routes)
   }
   
   return turnout
