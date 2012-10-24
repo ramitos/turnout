@@ -2,7 +2,7 @@
   "author": "Sérgio Ramos <mail@sergioramos.me>",
   "description": "http router",
   "main": "src/turnout.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "name": "turnout",
   "license": "MIT",
   "repository": {
@@ -23,5 +23,8 @@
   "keywords": [
     "http",
     "router"
-  ]
+  ],
+  "dependencies": {
+    "match-route": "0.0.x"
+  }
 }
