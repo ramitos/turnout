@@ -1,11 +1,13 @@
 var mr = require('match-route'),
     qs = require('querystring'),
     parse = require('./parse'),
-    build = require('./build'),
+    clone = require('clone'),
     url = require('url')
 
+var defaults = Object()
+
 module.exports = function () {
-  var routes = build()
+  var routes = clone(defaults)
   
   var turnout = function (req, res, next) {
     mr(req, routes, function (route, params, query) {
@@ -36,3 +38,7 @@ module.exports = function () {
   
   return turnout
 }
+
+;new Array('get', 'post', 'put', 'delete').forEach(function (method) {
+  defaults[method] = Object()
+})
