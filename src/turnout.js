@@ -10,8 +10,8 @@ module.exports = function () {
   var routes = clone(defaults)
   
   var turnout = function (req, res, next) {
-    mr(req, routes, function (route, params, query) {
-      if(route) route(req, res, params, query)
+    mr(req, routes, function (fn, route, params, query) {
+      if(fn) fn(req, res, params, query)
       else next()
     })
   }

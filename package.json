@@ -2,12 +2,16 @@
   "author": "Sérgio Ramos <mail@sergioramos.me>",
   "description": "http router",
   "main": "src/turnout.js",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "name": "turnout",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/ramitos/turnout.git"
+  },
+  "dependencies": {
+    "match-route": "0.1.x",
+    "clone": "0.1.x"
   },
   "devDependencies": {
     "blage": "0.0.x",
@@ -23,9 +27,5 @@
   "keywords": [
     "http",
     "router"
-  ],
-  "dependencies": {
-    "match-route": "0.0.x",
-    "clone": "0.1.x"
-  }
+  ]
 }
